@@ -1,5 +1,16 @@
-let soma = 0
+function saudar() {
+    let frase = document.getElementById('frase')
+    let genero = document.getElementById('generoSelect').value
 
-for( let i=2; i<=100; i+=2) soma += i
+    if (genero === "feminino") {
+        frase.textContent = "Olá, moça"
+        frase.style.color = "purple"
+    } else if (genero === "masculino") {
+        frase.textContent = "Olá, moço"
+        frase.style.color = "blue"
+    } else {
+        frase.textContent = "erro!"
+        frase.style.color = "red"
+    }
 
-console.log(soma)
+}
